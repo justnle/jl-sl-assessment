@@ -35,7 +35,7 @@ This project was completed as part of the frontend assessment for Stackline. The
 
 ## Deployment
 
-- The final solution was deployed to [https://justnle.github.io/jl-sl-assessment], and the project repository is available on [GitHub repository link](https://github.com/justnle/jl-sl-assessment).
+- The final solution was deployed to [https://justnle.github.io/jl-sl-assessment](https://justnle.github.io/jl-sl-assessment), and the project repository is available on [GitHub repository link](https://github.com/justnle/jl-sl-assessment).
 
 ## Evaluation Criteria Met
 
