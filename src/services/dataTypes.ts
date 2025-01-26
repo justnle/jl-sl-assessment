@@ -33,3 +33,5 @@ type ProductData = {
 };
 
 export type { ProductData };
+
+export default ProductData;
