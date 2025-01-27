@@ -91,7 +91,7 @@ const Table: React.FC<TableProps> = ({ data }) => {
     }, [data, sortConfig]);
 
     return (
-        <div className="text-[#9D9FA8] h-full">
+        <div className="text-[#9D9FA8] h-full flex-1">
             <table className="w-full table-auto min-w-max">
                 <thead className="p-4 transition-colors cursor-pointer border-b border-blue-gray-100 bg-blue-gray-50/50 hover:bg-blue-gray-50">
                     <tr>

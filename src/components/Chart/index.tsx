@@ -108,7 +108,7 @@ const SalesLineChart: React.FC<SalesLineChartProps> = ({ data }) => {
     };
 
     return (
-        <div className="h-full w-full">
+        <div className="h-full w-full overflow-y-auto flex-1">
             <Line data={salesChartData} options={chartOptions} />
         </div>
     );

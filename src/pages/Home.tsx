@@ -32,8 +32,8 @@ const Home = () => {
 
     const MainColSkeleton = () => {
         return (
-            <div className="grid grid-rows-2 gap-16 col-span-4 h-full">
-                <Skeleton variant="rectangular" width="100%" height="100%" />
+            <div className="flex flex-col lg:col-span-4 gap-4">
+                <Skeleton variant="rectangular" width="100%" height="500px" />
                 <Skeleton variant="rectangular" width="100%" height="100%" />
             </div>
         );
@@ -49,8 +49,8 @@ const Home = () => {
         return (
             <div className="home h-screen flex flex-col">
                 <Header />
-                <div className="home__content grid grid-cols-5 mx-4 mt-12 mb-4 gap-4 flex-grow overflow-hidden">
-                    <div className="bg-white shadow">
+                <div className="home__content__skeleton grid grid-cols-1 lg:grid-cols-5 mx-4 mt-12 mb-4 gap-4 h-full">
+                    <div className="bg-white shadow lg:col-span-1">
                         <SideColSkeleton />
                     </div>
                     <MainColSkeleton />
@@ -64,17 +64,17 @@ const Home = () => {
     }
 
     return (
-        <div className="home h-screen flex flex-col">
+        <div className="home flex flex-col">
             <Header />
-            <div className="home__content grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 mx-4 mt-12 mb-4 gap-4 flex-grow overflow-hidden">
-                <div className="bg-white shadow sm:col-span-2 lg:col-span-1">
+            <div className="home__content grid grid-cols-1 lg:grid-cols-5 mx-4 mt-12 mb-4 gap-4">
+                <div className="bg-white shadow lg:col-span-1">
                     <SideCol data={data} />
                 </div>
-                <div className="grid grid-rows-3 sm:grid-rows-2 gap-4 col-span-2 lg:col-span-4 h-full overflow-hidden">
-                    <div className="bg-white p-4 shadow overflow-y-auto">
+                <div className="flex flex-col lg:col-span-4 gap-4">
+                    <div className="bg-white p-4 shadow lg:col-span-3 flex flex-col h-[500px]">
                         <Chart data={data[0].sales} />
                     </div>
-                    <div className="bg-white pt-4 px-4 shadow overflow-y-auto">
+                    <div className="bg-white pt-4 px-4 shadow lg:col-span-2 flex flex-col h-full overflow-x-auto">
                         <Table data={data} />
                     </div>
                 </div>
@@ -82,5 +82,6 @@ const Home = () => {
         </div>
     );
 };
+
 
 export default Home;
