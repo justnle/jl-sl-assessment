@@ -66,12 +66,12 @@ const Home = () => {
     return (
         <div className="home h-screen flex flex-col">
             <Header />
-            <div className="home__content grid grid-cols-5 mx-4 mt-12 mb-4 gap-4 flex-grow overflow-hidden">
-                <div className="bg-white shadow">
+            <div className="home__content grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 mx-4 mt-12 mb-4 gap-4 flex-grow overflow-hidden">
+                <div className="bg-white shadow sm:col-span-2 lg:col-span-1">
                     <SideCol data={data} />
                 </div>
-                <div className="grid grid-rows-2 gap-12 col-span-4 h-full overflow-hidden">
-                    <div className="bg-white p-4 shadow">
+                <div className="grid grid-rows-3 sm:grid-rows-2 gap-4 col-span-2 lg:col-span-4 h-full overflow-hidden">
+                    <div className="bg-white p-4 shadow overflow-y-auto">
                         <Chart data={data[0].sales} />
                     </div>
                     <div className="bg-white pt-4 px-4 shadow overflow-y-auto">

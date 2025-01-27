@@ -8,12 +8,16 @@ const SideCol: React.FC<SideColProps> = ({ data }) => {
 
     return (
         <div className="side-col text-black flex flex-col items-center gap-4">
-            <img src={image} alt={title} className="w-[50%] h-auto mt-4" />
+            <img
+                src={image}
+                alt={title}
+                className="w-auto max-h-[300px] mt-4"
+            />
             <div className="side-col__title text-xl font-semibold">{title}</div>
             <div className="side-col__subtitle text-sm font-light text-center w-4/5">
                 {subtitle}
             </div>
-            <div className="side-col__tags flex flex-wrap gap-2 justify-between border-t border-b border-gray-300 p-4 my-2">
+            <div className="side-col__tags flex flex-wrap gap-2 justify-between border-t border-b border-gray-300 p-4 w-full">
                 {tags.map((tag) => (
                     <span
                         key={tag}
