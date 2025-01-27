@@ -1,50 +1,47 @@
-# React + TypeScript + Vite
+# Stackline Assessment Submission
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project was completed as part of the frontend assessment for Stackline. The goal was to create a simple product web page using React for the view and Redux for state management that mimics the wire mockup provided, implementing either one or both a chart and table for the data.
 
-Currently, two official plugins are available:
+## Project Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Technology Stack**: React, Redux, TypeScript, Tailwind CSS, Material UI, Chart.js
+- **Key Features**:
+  - A dynamic table and chart that populates based on data fetched from the provided JSON file.
+  - Proper state management with Redux to handle and store the data.
+  - Clean and maintainable code using best practices in React and Redux.
 
-## Expanding the ESLint configuration
+## Steps Taken
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+1. **Setting Up the Project**:
+   - I initialized the project using `npm create vite@latest` with TypeScript to ensure type safety.
+   - Installed necessary dependencies, including `react-redux` and `redux` for state management. I chose `tailwindcss` to help stylize the components, `chart.js` for the chart and `mui` for some quick skeleton loads.
 
-- Configure the top-level `parserOptions` property like this:
+2. **Implementing Redux**:
+   - Created the Redux store to manage the application's state.
+   - Set up actions and reducers to fetch and store the JSON data.
+   - Utilized Redux's `useDispatch` and `useSelector` hooks to manage state and update the UI.
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+3. **Fetching Data**:
+   - The JSON data was integrated by simulating a mock API call. The data was loaded when the component mounted, and the Redux state was updated accordingly.
+   
+4. **Rendering the Table/Graph**:
+   - I created a functional component to render a table that dynamically populates with the JSON data.
+   - I used `chart.js` to render a line graph. I was not sure what two data sets were being represented, but I displayed retail sales and wholesale sales.
+   - Applied the provided wire mockup closely to ensure the layout matched the design.
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+5. **Optional Features**:
+   - The table was enhanced with sorting functionality.
+   - Functional components and TypeScript were used to ensure clean, maintainable code.
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+## Deployment
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+- The final solution was deployed to [https://justnle.github.io/jl-sl-assessment](https://justnle.github.io/jl-sl-assessment), and the project repository is available on [GitHub repository link](https://github.com/justnle/jl-sl-assessment).
+
+## Evaluation Criteria Met
+
+- The web page closely resembles the wire mockup, with a working table/graph as per the specifications.
+- React and Redux best practices were followed in structuring the components, actions, and reducers.
+- The code is clean, modular, and easy to follow.
+- The solution includes optional enhancements such as sorting for the table/graph.
+
+Thank you for reviewing my submission!
